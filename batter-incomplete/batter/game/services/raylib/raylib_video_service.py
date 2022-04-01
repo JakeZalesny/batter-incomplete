@@ -52,6 +52,7 @@ class RaylibVideoService(VideoService):
         filepath = text.get_fontfile()
         # fixed os dependent filepath
         filepath = str(pathlib.Path(filepath))
+        print(filepath)
         value = text.get_value()
         size = text.get_size()
         spacing = 0
@@ -59,6 +60,7 @@ class RaylibVideoService(VideoService):
         tint = self._to_raylib_color(Color(255, 255, 255))
 
         font = self._fonts[filepath]
+        print("FONT: ",font)
         text_image = pyray.image_text_ex(font, value, size, spacing, tint)
         
         x = position.get_x()

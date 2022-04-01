@@ -4,6 +4,7 @@ from game.casting.color import Color
 # GENERAL GAME CONSTANTS
 # -------------------------------------------------------------------------------------------------- 
 
+NEW_GAME = 1
 # GAME
 GAME_NAME = "Batter"
 FRAME_RATE = 60
@@ -48,7 +49,7 @@ ENTER = "enter"
 PAUSE = "p"
 
 # SCENES
-NEW_GAME = 0
+GAME = 0
 TRY_AGAIN = 1
 NEXT_LEVEL = 2
 IN_PLAY = 3
