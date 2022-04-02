@@ -1,6 +1,7 @@
 import os
 import pathlib
 import pyray
+from game.casting.image import Image
 from constants import *
 from game.casting.color import Color
 from game.casting.text import Text
@@ -23,7 +24,7 @@ class RaylibVideoService(VideoService):
         pyray.begin_drawing()
         pyray.clear_background(raylib_color)
 
-    def draw_image(self, image, position):
+    def draw_image(self, image: Image, position):
         filepath = image.get_filename()
         # fixed os dependent filepath
         filepath = str(pathlib.Path(filepath))
